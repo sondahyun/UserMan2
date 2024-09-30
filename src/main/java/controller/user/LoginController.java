@@ -27,8 +27,8 @@ public class LoginController implements Controller {
 			/* UserNotFoundException이나 PasswordMismatchException 발생 시
 			 * 다시 login form을 사용자에게 전송하고 오류 메세지도 출력
 			 */
-            request.setAttribute("loginFailed", true);
-			request.setAttribute("exception", e);
+            request.setAttribute("loginFailed", true); // jsp에서 출력
+			request.setAttribute("exception", e); // jsp에서 출력
             return "/user/loginForm.jsp";			
 		}	
     }
