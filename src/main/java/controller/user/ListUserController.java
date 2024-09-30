@@ -29,7 +29,7 @@ public class ListUserController implements Controller {
 		List<User> userList = manager.findUserList();
 		// List<User> userList = manager.findUserList(currentPage, countPerPage);
 
-		// userList 객체와 현재 로그인한 사용자 ID를 request에 저장하여 전달
+		// userList 객체와 현재 로그인한 사용자 ID를 request에 저장하여 전달 (jsp에서 바로 출력해도 됨)
 		request.setAttribute("userList", userList);				
 		request.setAttribute("curUserId", 
 				UserSessionUtils.getLoginUserId(request.getSession()));		

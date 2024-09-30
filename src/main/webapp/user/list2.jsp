@@ -44,7 +44,7 @@
 	  while ( userIter.hasNext() ) {
 		User user = (User)userIter.next();
 --%>	  	
-	  <c:forEach var="user" items="${userList}">  			  	
+	  <c:forEach var="user" items="${userList}"> <!-- jstl 사용 -->	  	
   		<tr>
 		  <td width="190" align="center" bgcolor="ffffff" height="20">
 		  	${user.userId}       <%-- <%=user.getUserId()%> --%>
